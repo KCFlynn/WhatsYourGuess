@@ -2,7 +2,7 @@
 var router = express.Router();
 
 /* POST to adduser. */
-/*router.post('/adduser', function(req, res) {
+router.post('/adduser', function(req, res) {
   var db = req.db;
   var collection = db.get('playerlist');
   collection.insert(req.body, function(err, result){
@@ -10,11 +10,11 @@ var router = express.Router();
       (err === null) ? { msg: '' } : { msg: err }
     );
   });
-});*/
+});
 
 
 /* GET userlist. */
-/*router.get('/userlist', function(req, res) {
+router.get('/userlist', function(req, res) {
   var db = req.db;
    var collection = db.get('playerlist');
    collection.find({},{},function(e,docs){
@@ -23,7 +23,7 @@ var router = express.Router();
  });
 
  /* DELETE to deleteuser. */
- /*router.delete('/deleteplayer/:id', function(req, res) {
+ router.delete('/deleteplayer/:id', function(req, res) {
      var db = req.db;
      var collection = db.get('playerlist');
      var userToDelete = req.params.id;
@@ -37,7 +37,7 @@ var router = express.Router();
 //  users.update({name: 'foo'}, {name: 'bar'})
 
 /* Modify a user */
-/*router.put('/updateuser/:id', function(req, res) {
+router.put('/updateuser/:id', function(req, res) {
   var db = req.db;
   var collection = db.get('playerlist');
   var userToUpdate = req.params.id;
@@ -47,9 +47,9 @@ var router = express.Router();
       (err === null) ? { msg: '' } : { msg: err }
     );
     });
-});*/
+});
 /* Modify a user */
-/*router.put('/updateuser/:id', function(req, res) {
+router.put('/updateuser/:id', function(req, res) {
   var db = req.db;
   var collection = db.get('playerlist');
   var userToUpdate = req.params.id;

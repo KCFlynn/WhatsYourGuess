@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"> </script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/themes/themes/MondayDues.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="index.js"></script>
+    
+    
+    <title>Whats Your Guess</title>
+</head>
+<body>
+     <!--Home page-->
+     <div data-role="page" id="Home">
+            <div data-role="header"data-theme="a" >
+                <h1>Guess the Average</h1>
+            </div>
+            <div data-role="content" data-theme="a">    
+                <p>Guess the Average with Everyone Here!</p> 
+                <a href="#enterguess" data-role="button" data-transition='flip'>Enter Your Guess</a>
+            </div>
+    
+            <div data-role="footer" data-theme="a">
+               <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
+            </div>
+        </div>
+
+        <!--pickplayer page-->
+     <div data-role="page" id="playerlist">
+        <div data-role="header"data-theme="a">
+            <h1>Guess the Average</h1>
+        </div>
+        <div data-role="content"data-theme="a">    
+            <div id="userlist">
+               <ul data-role = "listview" id = "playerul"></ul>
+            <!--</div><br /><br /><br />
+            
+            <p>Pick a Player or create new account!</p> <br /><br />       
+            <a href="#CreatePage" data-role="button" data-transition='flip'>Create New Account</a>
+        </div>-->
+
+        <div data-role="footer"data-theme="a">
+           <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
+        </div>
+    </div>
+    
+
+    <!--Create Account page-->
+    <div data-role="page" id="enterguess">
+
+        <div data-role="header"data-theme="a">
+            <h1>Guess the Average</h1>
+        </div>
+
+        <div data-role="content"data-theme="a">
+            <p>Please Enter Your Guess</p>
+            <input type="text" id="name" value="" placeholder="Enter name"/>
+            <input type="text" id="age" value="" placeholder="Enter your number"/>
+            <input type="text" id="ageGuess" value="" placeholder="Guess the average"/> 
+            <input type="submit" href="#playerlist" value="Create Account" id="create"/>
+            <!--<a href="#PickBet" data-role="button" data-transition='pop'>Pick Your Bet Size</a>-->
+        </div>
+
+        <div data-role="footer"data-theme="a">
+           <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
+        </div>
+    </div>
+    
+    
+    <!--Win page-->
+    <div data-role="page" id="WinPage">
+
+        <div data-role="header"data-theme="a">
+            <h1>Guess the Average</h1>                          
+        </div>
+
+        <div data-role="content"data-theme="a">       
+            <p>Congratulations! You won!</p>    
+            <a href="#Home" data-role="button" data-transition='pop' >Play Again</a>
+        </div>
+
+        <div data-role="footer"data-theme="a">
+           <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
+        </div>
+    </div>
+            
+
+  
+</body>
+</html>
