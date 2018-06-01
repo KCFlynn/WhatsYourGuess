@@ -37,17 +37,17 @@ router.get('/userlist', function(req, res) {
 //  users.update({name: 'foo'}, {name: 'bar'})
 
 /* Modify a user */
-router.put('/updateuser/:id', function(req, res) {
+/*router.put('/updateuser/:id', function(req, res) {
   var db = req.db;
   var collection = db.get('playerlist');
   var userToUpdate = req.params.id;
   collection.update( { '_id': userToUpdate },
-  { $set: { current_balance: balance }}, function (err, doc, next) {  // can do more than one at a time
+  { $set: { current_score: score }}, function (err, doc, next) {  // can do more than one at a time
       res.send(
       (err === null) ? { msg: '' } : { msg: err }
     );
     });
-});
+});*/
 /* Modify a user */
 router.put('/updateuser/:id', function(req, res) {
   var db = req.db;
