@@ -109,7 +109,7 @@ function createList() {
 function addNewUser(){
     // ajax call to mongo
     // Use AJAX to post the object to our adduser service
-    var newUser = new PlayerObject( $('#name').val(), $('#knownVal').val(), $('#guess').val())
+    var newUser = new PlayerObject( $('#name').val(), $('#knownVal').val(), $('#guess').val(), 0)
     $.ajax({
         type: 'POST',
         data: newUser,
