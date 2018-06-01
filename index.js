@@ -147,7 +147,7 @@ function buttonClicked() {
     }
 };
 
-function GetNewBalance(balance) {
+function GetNewBalance(score) {
  /*var dice = [];
  RollDice(dice);
  var dice1txt = "images/dice-" + dice[0] + ".jpg";
@@ -156,7 +156,7 @@ function GetNewBalance(balance) {
  document.getElementById("image2").src = dice2txt;*/
     var score = 0;
     var avg = userArray[pointer].MongoKnownVal;
-    var sum = avg.reduce(function(a+b) { return a + b; }, 0);
+    var sum = avg.reduce(function(a+b) { return a + b; }, 0)/userArray[].length;
  if (sum == userArray[pointer].MongoGuess)
  {
      score = score + 10;
