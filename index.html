@@ -23,7 +23,7 @@
                 <h1>Guess the Average</h1>
             </div>
             <div data-role="content" data-theme="a">    
-                <p>Guess the Average with Everyone Here!</p> 
+                <p>Guess the Average with All Your Friends!</p> 
                 <a href="#enterguess" data-role="button" data-transition='flip'>Enter Your Guess</a>
             </div>
     
@@ -46,6 +46,7 @@
             <a href="#CreatePage" data-role="button" data-transition='flip'>Create New Account</a>
         </div>-->
 
+                
         <div data-role="footer"data-theme="a">
            <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
         </div>
@@ -62,8 +63,8 @@
         <div data-role="content"data-theme="a">
             <p>Please Enter Your Guess</p>
             <input type="text" id="name" value="" placeholder="Enter name"/>
-            <input type="text" id="age" value="" placeholder="Enter your number"/>
-            <input type="text" id="ageGuess" value="" placeholder="Guess the average"/> 
+            <input type="text" id="knownVal" value="" placeholder="Enter your number"/>
+            <input type="text" id="guess" value="" placeholder="Guess the average"/> 
             <input type="submit" href="#playerlist" value="Create Account" id="create"/>
             <!--<a href="#PickBet" data-role="button" data-transition='pop'>Pick Your Bet Size</a>-->
         </div>
@@ -82,7 +83,8 @@
         </div>
 
         <div data-role="content"data-theme="a">       
-            <p>Congratulations! You won!</p>    
+            <p><span id="status"></span><br/>
+                Your Score is <span id="score"></span></p>
             <a href="#Home" data-role="button" data-transition='pop' >Play Again</a>
         </div>
 
