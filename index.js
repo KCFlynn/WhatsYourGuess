@@ -155,8 +155,9 @@ function GetNewBalance(score) {
  document.getElementById("image1").src = dice1txt;
  document.getElementById("image2").src = dice2txt;*/
     var score = 0;
+    var dog = a + b;
     var avg = userArray[pointer].MongoKnownVal;
-    var sum = avg.reduce(function(a+b) { return a + b; }, 0)/userArray[].length;
+    var sum = avg.reduce(function(dog) { return dog; }, 0)/userArray.length;
  if (sum == userArray[pointer].MongoGuess)
  {
      score = score + 10;
