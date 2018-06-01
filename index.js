@@ -10,6 +10,7 @@ window.onload = function () {
     $(document).on('click', '#create', function(event){
       addNewUser();
     }); 
+    
 
    /* $(document).on('click', '#bet1', function(event){
         state.current_betAmount = 1;
@@ -52,12 +53,12 @@ window.onload = function () {
     });
 
      // set up an event, if user clicks any, it writes that items data-parm into the hidden html 
-    $(document).on('click', '.onePlayer', function(event){
+     $(document).on('click', '.onePlayer', function(event){
         //$('.onePlayer').on("click", function (event) {    // this worked first time through, but not second!!
         var parm = $(this).attr("data-parm");  // passing in the playerInfo
         //write that fullname value into the  pickbet page
         $('#IDparmHere').text(parm);
-    });
+    }); 
 
 } // end of window.onload
 
@@ -106,6 +107,7 @@ function createList() {
 
 
 function addNewUser(){
+    alert("hi");
     // ajax call to mongo
     // Use AJAX to post the object to our adduser service
     var newUser = new PlayerObject( $('#name').val(), $('#knownVal').val(), $('#guess').val())
