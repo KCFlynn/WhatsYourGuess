@@ -55,10 +55,10 @@ router.put('/updateuser/:id', function(req, res) {
   var userToUpdate = req.params.id;
     var bothParams = userToUpdate.split('*');
     var ourID = bothParams[0];
-    var ourMongoBalance = bothParams[1];
+    var ourMongoScore = bothParams[1];
     //we need a variable here that stores the user's balance
   collection.update( { '_id': ourID, }, 
-  { $set: { "MongoBalance": ourMongoBalance }}, function (err, doc, next) {  // can do more than one at a time
+  { $set: { "MongoScore": ourMongoScore }}, function (err, doc, next) {  // can do more than one at a time
       res.send(
       (err === null) ? { msg: '' } : { msg: err }
     );
