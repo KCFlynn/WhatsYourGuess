@@ -8,7 +8,7 @@ window.onload = function () {
     });*/
 
     $(document).on('click', '#create', function(event){
-      addNewUser();ButtonQuit
+      addNewUser();
     }); 
 
    /* $(document).on('click', '#bet1', function(event){
