@@ -99,7 +99,7 @@ function createList() {
         userArray.forEach(function(element) {
             var playerInfo = element.MongoName + "_" + element.MongoKnownVal + "_" + element.MongoGuess
             $('#playerul').append('<li><a data-transition="pop" class="onePlayer" data-parm=' + 
-                playerInfo + ' </a></li>' );
+                playerInfo + ' href="#playerlist" > ' + playerInfo + '</a></li>' );
         });
     $('#playerul').listview('refresh');
     });
