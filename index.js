@@ -7,7 +7,7 @@ window.onload = function () {
         buttonClicked();
     });*/
 
-    $(document).on('click', '#enterguess', function(event){
+    $(document).on('click', '#create', function(event){
       addNewUser();ButtonQuit
     }); 
 
