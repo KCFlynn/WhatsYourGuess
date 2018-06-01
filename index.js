@@ -11,7 +11,7 @@ window.onload = function () {
       addNewUser();ButtonQuit
     }); 
 
-    $(document).on('click', '#bet1', function(event){
+   /* $(document).on('click', '#bet1', function(event){
         state.current_betAmount = 1;
         document.location.href = "#game";
     });
@@ -23,7 +23,7 @@ window.onload = function () {
     $(document).on('click', '#bet5', function(event){
         state.current_betAmount = 5;
         document.location.href = "#game";
-    });
+    });*/
 
     $(document).on('click', '#ButtonQuit', function(event){
         quit();
