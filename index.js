@@ -1,14 +1,13 @@
-
 window.onload = function () {
 
     userArray.length = 0;  // clear array
     
-   $(document).on('click', '#ButtonBet', function(event){
+   $(document).on('click', '#enterguess', function(event){
         buttonClicked();
     });
 
     $(document).on('click', '#create', function(event){
-      addNewUser();
+      addNewUser();ButtonQuit
     }); 
     
 
@@ -103,7 +102,7 @@ function createList() {
         });
     $('#playerul').listview('refresh');
     });
-};
+}
 
 
 function addNewUser(){
@@ -128,7 +127,7 @@ function addNewUser(){
             alert('Error: ' + response.msg);
         }
     });
-};
+}
 
 function buttonClicked() {
     state.current_score = GetNewBalance(state.current_score);  // run one cycle of the game
@@ -146,7 +145,7 @@ function buttonClicked() {
         state.current_score = userArray[state.current_index].playerScore = 0;  // set player back to 0
         document.location.href = "index.html#WinPage";
     }
-};
+}
 
 function GetNewBalance(score) {
  /*var dice = [];
@@ -155,7 +154,7 @@ function GetNewBalance(score) {
  var dice2txt = "images/dice-" + dice[1] + ".jpg";
  document.getElementById("image1").src = dice1txt;
  document.getElementById("image2").src = dice2txt;*/
-    var score = 0;
+    
     var dog = a + b;
     var avg = userArray[pointer].MongoKnownVal;
     var sum = avg.reduce(function(dog) { return dog; }, 0)/userArray.length;
@@ -195,7 +194,7 @@ function quit(){
       
       if (response.msg === '') {
         
-            document.location.href = "#playerlist"; // move the html back to the pickplayer sub-page
+            document.location.href = "#listOfPlayers"; // move the html back to the pickplayer sub-page
         }
         else {
             // If something goes wrong, alert the error message that our service returned
@@ -236,7 +235,7 @@ function setCurrent_index(playerInfo) {
             state.current_index = -1; // indicates bug in code
         }
     });
-};
+}
 
 
 function deleteuser() {
