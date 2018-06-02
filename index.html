@@ -32,8 +32,8 @@
             </div>
         </div>
 
-        <!--playerlist page-->create
-     <div data-role="page" id="playerlist">
+        <!--listOfPlayers page-->
+     <div data-role="page" id="listOfPlayers">
         <div data-role="header"data-theme="a">
             <h1>Guess the Average</h1>
         </div>
@@ -67,12 +67,67 @@
             <input type="text" id="name" value="" placeholder="Enter name"/>
             <input type="text" id="knownVal" value="" placeholder="Enter your number"/>
             <input type="text" id="guess" value="" placeholder="Guess the average"/> 
-            <!--<input type="submit" href="#playerlist" value="Create Account" id="create"/>-->
-            <a href="#playerlist" data-role="button" data-transition='pop'>Create Account</a>
+            <!--<input type="submit" href="#listOfPlayers" value="Create Account" id="create"/>-->
+            <a type="submit" href="#listOfPlayers" data-role="button" data-transition='pop' id="create">Create Account</a>
         </div>
 
         <div data-role="footer"data-theme="a">
            <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
+        </div>
+    </div>
+
+<!--Pick Bet page-->
+    <div data-role="page" id="PickBet">
+
+        <div data-role="header"data-theme="a">
+            <h1>Diamond Dave's Delightful Dice</h1>
+        </div>
+
+        <div data-role="content"data-theme="a">
+            <p id="welcome">xxxxx</p>
+            <p>Pick your bet size, $1, $2, or $5 </p>
+            <!-- hidden    a place to stash the user ID -->
+            <p id="IDparmHere" hidden >changeMe</p>  
+
+            <input type="submit" value="Bet $1" id="bet1"/>
+            <input type="submit" value="Bet $2" id="bet2"/>
+            <input type="submit" value="Bet $5" id="bet5"/>
+        </div>
+
+        <div data-role="footer"data-theme="a">
+            <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
+        </div>
+    </div>
+    <!--Play Dice page-->
+    <div data-role="page" id="game">
+
+        <div data-role="header" data-theme='a'>
+            <h1>Diamond Dave's Delightful Dice</h1>
+        </div>
+
+         <!-- game content -->    
+         <div data-role="content" data-theme='a'>
+            <img id="image1" src="./images/dice-1.jpg" alt="Dice Image" style="width:50px;height:50px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        
+            <img id="image2" src="./images/dice-6.jpg" alt="Dice Image" style="width:50px;height:50px;">
+            <br /><br />
+            <p>
+                Your balance is $<span id="balance">5</span><br />
+                Number of turns <span id="turnCount">0</span>
+            </p>
+            <br />
+            <p>
+                <span id="status"></span>
+            </p>
+            <button id="ButtonBet" type="button">"Bet Now" </button>
+            <br />
+            <button id="ButtonQuit" type="button">"Quit Game" </button>
+            
+    </div>
+
+        <div data-role="footer" data-theme='a'>
+            <p>Copyright &copy; Kelly Flynn and Sean Newman 2018</p>
         </div>
     </div>
     
