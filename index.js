@@ -106,6 +106,7 @@ function createList() {
 
 
 function addNewUser(){
+    // alert("hi");
     // ajax call to mongo
     // Use AJAX to post the object to our adduser service
     var newUser = new PlayerObject( $('#name').val(), $('#knownVal').val(), $('#guess').val(), 0)
@@ -155,10 +156,16 @@ function GetNewBalance(score) {
  document.getElementById("image1").src = dice1txt;
  document.getElementById("image2").src = dice2txt;*/
     
-    var dog = a + b;
-    var avg = userArray[pointer].MongoKnownVal;
-    var sum = avg.reduce(function(dog) { return dog; }, 0)/userArray.length;
- if (sum == userArray[pointer].MongoGuess)
+    var sum = 0;
+    userArray.forEach(function(element) {
+        sum = sum + this.MongoKnownVal;
+    });
+    
+    var avg = sum / userArray.length;
+    
+    //var avg = userArray[state.current_index].MongoKnownVal;
+    //var sum = avg.reduce(function(dog) { return dog; }, 0)/userArray.length;
+ if (avg == userArray[state.current_index].MongoGuess)
  {
      score = score + 10;
      score = score + state.current_score;
