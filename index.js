@@ -139,7 +139,7 @@ function buttonClicked() {
         state.currentPlayerInfo = ""; 
         state.current_score = userArray[state.current_index].playerScore = 0.0;
         // delete them from Mongo rigth here
-        deleteuser();
+       //deleteuser();
         document.location.href = "index.html#LosePage";  // take player to lose page
     }
     if(state.current_score >= 20.0) {
