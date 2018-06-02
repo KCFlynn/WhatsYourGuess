@@ -30,7 +30,7 @@ window.onload = function () {
         quit();
     });
 
-    $(document).on("click", "#listOfPlayers",function(event){
+    $(document).on("click", "#playerlist",function(event){
         createList();
     });
  
@@ -99,7 +99,7 @@ function createList() {
         userArray.forEach(function(element) {
             var playerInfo = element.MongoName + "_" + element.MongoKnownVal + "_" + element.MongoGuess+ "_" + element.MongoScore
             $('#playerul').append('<li><a data-transition="pop" class="onePlayer" data-parm=' + 
-                playerInfo + ' href="#listOfPlayers" > ' + playerInfo + '</a></li>' );
+                playerInfo + ' href="#playerlist" > ' + playerInfo + '</a></li>' );
         });
     $('#playerul').listview('refresh');
     });
@@ -121,7 +121,7 @@ function addNewUser(){
             $('#name').val('');
             $('#knownVal').val('');
             $('#guess').val('');
-            //document.location.href = "#listOfPlayers"; // move the html back to the pickplayer sub-page
+            //document.location.href = "#playerlist"; // move the html back to the pickplayer sub-page
         }
         else {
             // If something goes wrong, alert the error message that our service returned
@@ -195,7 +195,7 @@ function quit(){
       
       if (response.msg === '') {
         
-            document.location.href = "#listOfPlayers"; // move the html back to the pickplayer sub-page
+            document.location.href = "#playerlist"; // move the html back to the pickplayer sub-page
         }
         else {
             // If something goes wrong, alert the error message that our service returned
